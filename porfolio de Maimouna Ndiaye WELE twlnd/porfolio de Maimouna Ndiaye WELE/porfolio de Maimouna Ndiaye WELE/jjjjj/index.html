@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Maïmouna Ndiaye Wele, étudiante en Licence 2 passionnée par la technologie et la cybersécurité."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, cybersécurité, technologie, développement web, Maïmouna Ndiaye Wele"
+    />
+    <meta name="author" content="Maïmouna Ndiaye Wele" />
+    <title>Portfolio de Maïmouna Ndiaye Wele</title>
+    <!-- Intégration de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Ajout d'AOS (Animate On Scroll) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-[Poppins] dark-transition overflow-x-hidden">
+    <!-- Particles Background (Hero Section) -->
+    <div id="particles-js" class="hidden lg:block"></div>
+    
+    <!-- Header avec nav bar améliorée -->
+<header class="sticky top-0 bg-white/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4">
+      <!-- Section supérieure avec logo et bouton de mode sombre -->
+      <div class="flex items-center justify-between mb-4 md:mb-0">
+        <a href="#home" class="group">
+          <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 transform transition-all duration-300 group-hover:scale-105">Maïmouna Ndiaye Wele</h1>
+        </a>
+        <button id="theme-toggle" class="bg-gray-200 hover:bg-gray-300 text-black hover:text-black rounded-full transition-all duration-300 flex items-center shadow-sm hover:shadow-md">
+        </button>
+      </div>
+      
+      <!-- Navigation améliorée -->
+      <nav class="relative">
+        <!-- Bouton menu mobile -->
+        <button id="mobile-menu-button" class="md:hidden w-full flex items-center justify-center py-2 px-4 bg-blue-500 text-white rounded-md mb-3 hover:bg-blue-600 transition-colors">
+          <i class="fas fa-bars mr-2"></i> Menu
+        </button>
+        
+        <!-- Menu principal -->
+        <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row md:justify-center md:items-center gap-2 md:gap-3 transition-all duration-300">
+          <li class="w-full md:w-auto">
+            <a href="#home" class="inline-block w-full px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-white rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center">
+              <i class="fas fa-home mr-1"></i> Accueil
+            </a>
+          </li>
+          <li class="w-full md:w-auto">
+            <a href="#about" class="inline-block w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center">
+              <i class="fas fa-user mr-1"></i> À propos
+            </a>
+          </li>
+          <li class="w-full md:w-auto">
+            <a href="#skills" class="inline-block w-full px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center">
+              <i class="fas fa-star mr-1"></i> Compétences
+            </a>
+          </li>
+          <li class="w-full md:w-auto">
+            <a href="#projects" class="inline-block w-full px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center">
+              <i class="fas fa-project-diagram mr-1"></i> Projets
+            </a>
+          </li>
+          <li class="w-full md:w-auto">
+            <a href="#experience" class="inline-block w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center">
+              <i class="fas fa-briefcase mr-1"></i> Expériences
+            </a>
+          </li>
+          <li class="w-full md:w-auto">
+            <a href="#contact" class="inline-block w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center">
+              <i class="fas fa-envelope mr-1"></i> Contact
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Indicateur de section active -->
+        <div id="indicator" class="hidden md:block absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 rounded-full"></div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Hero Section avec animation de zoom-in -->
+    <section id="home" class="py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white relative overflow-hidden">
+      <!-- Animation de formes géométriques en arrière-plan -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="animate-spin-slow absolute -top-20 -left-20 w-40 h-40 rounded-full bg-white opacity-10"></div>
+        <div class="animate-pulse-slow absolute top-40 right-20 w-32 h-32 rounded-full bg-yellow-300 opacity-10"></div>
+        <div class="animate-spin-slow absolute bottom-10 left-1/4 w-24 h-24 rounded-full bg-pink-500 opacity-10"></div>
+        <div class="animate-pulse-slow absolute -bottom-10 right-1/3 w-36 h-36 rounded-full bg-blue-300 opacity-10"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="max-w-2xl mx-auto" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="relative">
+            <img
+              src="WhatsApp Image 2025-02-27 à 12.30.50_4888b66c.jpg"
+              alt="Portrait de Maïmouna Ndiaye Wele"
+              class="w-48 h-48 object-cover rounded-full mx-auto mb-6 border-4 border-white shadow-lg hover-scale"
+              loading="lazy"
+            />
+            <!-- Effet d'anneau pulsant -->
+            <div class="absolute inset-0 rounded-full border-4 border-white animate-pulse-slow" style="width: 12rem; height: 12rem; top: 50%; left: 50%; transform: translate(-50%, -50%)"></div>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 typing-effect" style="width: fit-content; margin: 0 auto;">Bonjour, je suis Maïmouna Ndiaye Wele</h2>
+          <p class="text-xl md:text-2xl mb-8 opacity-0" id="subtitle">
+            Étudiante en Licence 2 | Passionnée par la technologie et la
+            cybersécurité
+          </p>
+          <a href="#contact" class="inline-block px-8 py-3 bg-white text-blue-600 font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50">Me contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section avec animation fade-in -->
+    <section id="about" class="py-16" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 relative">
+          <span class="relative z-10">À propos de moi</span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600"></span>
+        </h2>
+        <p class="max-w-3xl mx-auto text-lg text-center leading-relaxed animate-on-scroll">
+          Je suis une étudiante en Licence 2 passionnée par la technologie et la
+          cybersécurité. J'aime créer des projets innovants et résoudre des
+          problèmes complexes. Mon objectif est de contribuer à un monde
+          numérique plus sûr et plus efficace.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section avec animations -->
+    <section id="skills" class="py-16 bg-gray-100 dark-transition">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 relative" data-aos="fade-up">
+          <span class="relative z-10">Compétences</span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale dark-transition" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl text-blue-500 mb-4 flex justify-center">
+              <i class="fas fa-tools animate-bounce-slow"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">Maintenance</h3>
+            <p class="text-gray-600 text-center dark-transition">Visite technique des matériels.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale dark-transition" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl text-blue-500 mb-4 flex justify-center">
+              <i class="fas fa-laptop-code animate-bounce-slow"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">Développement Web</h3>
+            <p class="text-gray-600 text-center dark-transition">Création de sites web modernes et responsives.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale dark-transition" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl text-blue-500 mb-4 flex justify-center">
+              <i class="fas fa-palette animate-bounce-slow"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">Design</h3>
+            <p class="text-gray-600 text-center dark-transition">Création de logos et interfaces utilisateur.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale dark-transition" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-4xl text-blue-500 mb-4 flex justify-center">
+              <i class="fas fa-shield-alt animate-bounce-slow"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">Cybersécurité</h3>
+            <p class="text-gray-600 text-center dark-transition">Sécurisation des systèmes et réseaux.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section avec animations de glissement -->
+    <section id="projects" class="py-16 dark-transition">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 relative" data-aos="fade-up">
+          <span class="relative z-10">Projets</span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale transition-all duration-500 cursor-pointer dark-transition" data-modal="modal1" data-aos="fade-right" data-aos-delay="100">
+            <div class="overflow-hidden">
+              <img src="e_commerce_935_550_0.jpg" alt="Projet 1" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Site Web E-commerce</h3>
+              <p class="text-gray-600 dark-transition">Création d'une plateforme de vente en ligne.</p>
+              <div class="mt-4 flex justify-end">
+                <button class="text-blue-500 hover:text-blue-700 flex items-center text-sm">
+                  <span>Voir détails</span>
+                  <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale transition-all duration-500 cursor-pointer dark-transition" data-modal="modal2" data-aos="fade-up" data-aos-delay="200">
+            <div class="overflow-hidden">
+              <img src="application-hd-png.png" alt="Projet 2" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Application Mobile</h3>
+              <p class="text-gray-600 dark-transition">Développement d'une application de gestion de tâches.</p>
+              <div class="mt-4 flex justify-end">
+                <button class="text-blue-500 hover:text-blue-700 flex items-center text-sm">
+                  <span>Voir détails</span>
+                  <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale transition-all duration-500 cursor-pointer dark-transition" data-modal="modal3" data-aos="fade-left" data-aos-delay="300">
+            <div class="overflow-hidden">
+              <img
+                src="Logo-Design-Template-Download-1180x664.jpg"
+                alt="Projet 3"
+                class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Logo Design</h3>
+              <p class="text-gray-600 dark-transition">Conception de logos pour des startups.</p>
+              <div class="mt-4 flex justify-end">
+                <button class="text-blue-500 hover:text-blue-700 flex items-center text-sm">
+                  <span>Voir détails</span>
+                  <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section avec animation de chronologie -->
+    <section id="experience" class="py-16 bg-gray-100 dark-transition">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 relative" data-aos="fade-up">
+          <span class="relative z-10">Expériences</span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600"></span>
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-8">
+          <div class="relative pl-8 border-l-4 border-blue-500 timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="absolute top-0 left-0 w-4 h-4 -ml-2 rounded-full bg-blue-500"></div>
+            <h3 class="text-xl font-semibold mb-1">2023 - Stage en Cybersécurité</h3>
+            <p class="text-gray-600 dark-transition">Entreprise TIC - Dakar, Sénégal</p>
+          </div>
+          <div class="relative pl-8 border-l-4 border-blue-500 timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="absolute top-0 left-0 w-4 h-4 -ml-2 rounded-full bg-blue-500"></div>
+            <h3 class="text-xl font-semibold mb-1">2022 - Projet de Développement Web</h3>
+            <p class="text-gray-600 dark-transition">Création d'un site web pour une ONG locale.</p>
+          </div>
+          <div class="relative pl-8 border-l-4 border-blue-500 timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="absolute top-0 left-0 w-4 h-4 -ml-2 rounded-full bg-blue-500"></div>
+            <h3 class="text-xl font-semibold mb-1">2021 - Formation en Maintenance Informatique</h3>
+            <p class="text-gray-600 dark-transition">Centre de Formation UNIPRO - Dakar, Sénégal</p>
+          </div>
+        </div>
+        <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+          <p class="mb-4 dark-transition">Pour plus d'informations, veuillez accéder à mon CV :</p>
+          <a href="cv.jpg" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-md transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105" target="_blank">
+            <i class="fas fa-download mr-2"></i> Télécharger le CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section avec animation du formulaire -->
+    <section id="contact" class="py-16 dark-transition">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 relative" data-aos="fade-up">
+          <span class="relative z-10">Contact</span>
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600"></span>
+        </h2>
+        <form
+          class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md dark-transition"
+          id="contact-form"
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          data-aos="zoom-in"
+        >
+          <div class="mb-6">
+            <label for="name" class="block text-gray-700 mb-2 dark-transition">Nom</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 dark-transition" 
+            />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block text-gray-700 mb-2 dark-transition">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 dark-transition" 
+            />
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 mb-2 dark-transition">Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              required 
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 dark-transition"
+            ></textarea>
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-3 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+            <i class="fas fa-paper-plane mr-2"></i> Envoyer
+          </button>
+        </form>
+        <div id="confirmation-message" class="mt-4 text-center"></div>
+      </div>
+    </section>
+
+    <!-- Footer avec animations -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <!-- Animation de vague -->
+        <div class="wave-top w-full overflow-hidden h-10 -mt-10">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-full">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-white"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-white"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-white"></path>
+          </svg>
+        </div>
+        
+        <p class="text-center mb-4 animate-pulse-slow">&copy; 2025 Maïmouna Ndiaye Wele. Tous droits réservés.</p>
+        
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="https://www.linkedin.com/in/MaimounWele" target="_blank" class="text-2xl hover:text-blue-400 transition-colors transform hover:scale-125 transition-transform duration-300">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:ndiayemaiwele@gmail.com" class="text-2xl hover:text-blue-400 transition-colors transform hover:scale-125 transition-transform duration-300">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/MaimounWele" target="_blank" class="text-2xl hover:text-blue-400 transition-colors transform hover:scale-125 transition-transform duration-300">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals for Projects améliorées avec animations -->
+    <div class="bg-white dark-transition rounded-lg w-11/12 max-w-2xl max-h-90vh overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">Site Web E-commerce</h3>
+            <button class="modal-close text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          <img src="e_commerce_935_550_0.jpg" alt="Site Web E-commerce" class="w-full h-60 object-cover rounded-lg mb-4" loading="lazy" />
+          <p class="text-gray-600 dark-transition mb-4">
+            Développement d'une plateforme e-commerce complète avec système de paiement, gestion des stocks et interface administrateur. Ce projet a été réalisé en utilisant les technologies suivantes :
+          </p>
+          <ul class="list-disc ml-6 mb-4 text-gray-600 dark-transition">
+            <li>HTML, CSS et JavaScript pour le frontend</li>
+            <li>PHP et MySQL pour le backend</li>
+            <li>Intégration de passerelles de paiement sécurisées</li>
+            <li>Système de gestion des stocks automatisé</li>
+          </ul>
+          <div class="flex justify-end">
+            <a href="#" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div class="bg-white dark-transition rounded-lg w-11/12 max-w-2xl max-h-90vh overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">Application Mobile</h3>
+            <button class="modal-close text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          <img src="application-hd-png.png" alt="Application Mobile" class="w-full h-60 object-cover rounded-lg mb-4" loading="lazy" />
+          <p class="text-gray-600 dark-transition mb-4">
+            Conception et développement d'une application mobile de gestion de tâches avec fonctionnalités avancées comme la synchronisation cloud, les rappels et le partage collaboratif. Technologies utilisées :
+          </p>
+          <ul class="list-disc ml-6 mb-4 text-gray-600 dark-transition">
+            <li>React Native pour le développement cross-platform</li>
+            <li>Firebase pour la base de données et l'authentification</li>
+            <li>Redux pour la gestion d'état</li>
+            <li>Notifications push et intégration de calendrier</li>
+          </ul>
+          <div class="flex justify-end">
+            <a href="#" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal3" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div class="bg-white dark-transition rounded-lg w-11/12 max-w-2xl max-h-90vh overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">Logo Design</h3>
+            <button class="modal-close text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          <img src="Logo-Design-Template-Download-1180x664.jpg" alt="Logo Design" class="w-full h-60 object-cover rounded-lg mb-4" loading="lazy" />
+          <p class="text-gray-600 dark-transition mb-4">
+            Création de logos et identités visuelles pour plusieurs startups et petites entreprises. Ce projet comprend la conception graphique complète, incluant :
+          </p>
+          <ul class="list-disc ml-6 mb-4 text-gray-600 dark-transition">
+            <li>Recherche et analyse de marché</li>
+            <li>Création de plusieurs concepts et itérations</li>
+            <li>Livraison de fichiers en formats vectoriels et pour le web</li>
+            <li>Guide de style et d'utilisation de la marque</li>
+          </ul>
+          <div class="flex justify-end">
+            <a href="#" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts.js"></script>
+    <style>
+        /* Styles pour les animations personnalisées */
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate-on-scroll.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .hover-scale {
+          transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+          transform: scale(1.05);
+        }
+        
+        /* Effet de typographie animée */
+        .typing-effect {
+          overflow: hidden;
+          border-right: .15em solid #3490dc;
+          white-space: nowrap;
+          animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: #3490dc }
+        }
+        
+        /* Mode sombre */
+        .dark {
+          --bg-primary: #121212;
+          --bg-secondary: #1f1f1f;
+          --text-primary: #f7f7f7;
+          --text-secondary: #a0a0a0;
+        }
+        
+        .dark-transition {
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Personnalisation de la barre de défilement */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #3490dc;
+          border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #2a75b3;
+        }
+        
+        /* Animation de particules pour l'arrière-plan */
+        #particles-js {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      </style>
+      <script src="scripts.js"></script>
+  </body>
+</html>
+
+
+
